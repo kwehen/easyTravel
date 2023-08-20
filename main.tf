@@ -88,6 +88,7 @@ data "aws_ami" "server_ami" {
     name   = "name"
     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
   }
+}
 
 resource "aws_instance" "ubuntu-tft" {
   ami                    = data.aws_ami.server_ami.id
