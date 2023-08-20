@@ -18,11 +18,13 @@ Get easyTravel up and running with the OneAgent on AWS in minutes with this repo
 4. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
 5. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh?token=RANDOMTOKENGENRATEDBYPRIVATEREPO
 6. Paste link into userdata.tpl on your local machine
-7. ```$ terraform init```
-8. ```$ terraform apply```
-9. On your local machine: ```cd /```, ```cd .ssh```
-10. Once the instance is created and full provisoned. SSH into it with the private key created by Terraform ```ssh -i "tft-key" ubuntu@ec2-1-2-3-4.compute-1.amazonaws.com```
-11. Run the ```top``` command to ensure the OneAgent is running
+7. Create key pair or use existing key pair in .ssh file (preferebly named 'tft-key'): https://www.purdue.edu/science/scienceit/ssh-keys-windows.html
+8. Update line 80 of main.tf with the path to the key pair your created
+9. ```$ terraform init```
+10. ```$ terraform apply```
+11. On your local machine: ```cd /```, ```cd .ssh```
+12. Once the instance is created and full provisoned. SSH into it with the private key created by Terraform ```ssh -i "tft-key" ubuntu@ec2-1-2-3-4.compute-1.amazonaws.com```
+13. Run the ```top``` command to ensure the OneAgent is running
 
 # Troubleshooting
 - Verify that the commands pasted in the lines 164-166 are free of spacing issues
