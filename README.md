@@ -6,6 +6,7 @@ Get easyTravel up and running with the OneAgent on AWS in minutes with this repo
 
 # Pre-requisites
 - Terraform must be installed on your local machine. This can be done using this link: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+- You must have a working GitHub account: https://github.com/join
 - You must have a working AWS Account with valid permissions, if you do not, this can be done using this link: https://aws.amazon.com/resources/create-account/
 - You must configure the AWS CLI: https://www.youtube.com/watch?v=dZgLNL869YU
 - You must have a working Dynatrace tenant, managed or SAAS: https://www.dynatrace.com/signup/
