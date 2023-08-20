@@ -11,11 +11,12 @@ Get easyTravel up and running with the oneAgent on AWS in minutes with this repo
 - You must have a working Dynatrace tenant, managed or SAAS: https://www.dynatrace.com/signup/
 
 # Instructions
-1. Clone this repo to your local PC: $ git clone https://github.com/kwehen/easyTravel
-2. Place your DT tenant URL, PAAS Token, and oneAgent installation commands inside of the easytravel-install.sh script (Lines 13, 14, 164-166)
-3. Create a private GitHub repository and upload your configured easytravel-install.sh script (Make sure the file is named "easytravel-install.sh")
-4. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
-5. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh?token=RANDOMTOKENGENRATEDBYPRIVATEREPO
-6. Paste link into userdata.tpl on your local machine
-7. $ terraform init
-8. $ terraform apply
+1. Clone this repo to your local PC:
+   $ git clone https://github.com/kwehen/easyTravel
+3. Place your DT tenant URL, PAAS Token, and oneAgent installation commands inside of the easytravel-install.sh script (Lines 13, 14, 164-166)
+4. Create a private GitHub repository and upload your configured easytravel-install.sh script (Make sure the file is named "easytravel-install.sh")
+5. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
+6. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh?token=RANDOMTOKENGENRATEDBYPRIVATEREPO
+7. Paste link into userdata.tpl on your local machine
+8. $ terraform init
+9. $ terraform apply
