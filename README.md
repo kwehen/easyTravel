@@ -11,7 +11,7 @@ Get easyTravel up and running with the oneAgent on AWS in minutes with this repo
 - You must have a working Dynatrace tenant, managed or SAAS: https://www.dynatrace.com/signup/
 
 # Instructions
-1. Clone this repo to your local PC
+1. Clone this repo to your local PC: $ git clone https://github.com/kwehen/easyTravel
 2. Place your DT tenant URL, PAAS Token, and oneAgent installation commands inside of the easytravel-install.sh script (Lines 13, 14, 164-166)
 3. Create a private GitHub repository and upload your configured easytravel-install.sh script (Make sure the file is named "easytravel-install.sh")
 4. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
