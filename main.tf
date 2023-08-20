@@ -77,7 +77,7 @@ resource "aws_security_group" "tft-public-SG" {
 
 resource "aws_key_pair" "tft-auth" {
   key_name   = "tft-key"
-  public_key = file("~/.ssh/tft-key.pub")
+  public_key = file("~/.ssh/tft-key.pub") # Insert path to kay pair here
 }
 
 data "aws_ami" "server_ami" {
