@@ -26,5 +26,5 @@ Get easyTravel up and running with the OneAgent on AWS in minutes with this repo
 # Troubleshooting
 - Verify that the commands pasted in the lines 164-166 are free of spacing issues
 - Verify ```wget -O``` in your commands does not have extra whitespace
-<img width="1920" alt="Screenshot 2023-08-20 at 1 51 33 PM" src="https://github.com/kwehen/easyTravel/assets/110314567/fc7b8f55-1d47-42d4-a736-49e35a8c9976">
 - Check syslog on the instance and verify you are not getting any errors
+<img width="1920" alt="Screenshot 2023-08-20 at 1 51 33 PM" src="https://github.com/kwehen/easyTravel/assets/110314567/fc7b8f55-1d47-42d4-a736-49e35a8c9976">
