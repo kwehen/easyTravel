@@ -1,16 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
-resource "aws_vpc" "tf-test-vpc" {
-  cidr_block           = "10.1.0.0/16"
-  enable_dns_hostnames = true
-
-  tags = {
-    Name = "tf-test"
-  }
-}
-
 resource "aws_subnet" "tft-subnet1_public" {
   vpc_id                  = aws_vpc.tf-test-vpc.id
   cidr_block              = "10.1.1.0/24"
@@ -78,16 +65,6 @@ resource "aws_security_group" "tft-public-SG" {
 resource "aws_key_pair" "tft-auth" {
   key_name   = "tft-key"
   public_key = file("~/.ssh/tft-key.pub") # Insert path to kay pair here
-}
-
-data "aws_ami" "server_ami" {
-  most_recent = true
-  owners      = ["099720109477"]
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
 }
 
 resource "aws_instance" "ubuntu-tft" {
