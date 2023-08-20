@@ -17,5 +17,5 @@ Get easyTravel up and running with the oneAgent on AWS in minutes with this repo
 4. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
 5. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh?token=RANDOMTOKENGENRATEDBYPRIVATEREPO
 6. Paste link into userdata.tpl on your local machine
-7. $ terraform init
-8. $ terraform apply
+7. ```$ terraform init```
+8. ```$ terraform apply```
