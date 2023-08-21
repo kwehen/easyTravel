@@ -14,7 +14,7 @@ Get easyTravel up and running with the OneAgent on AWS in minutes with this repo
 # Instructions
 1. Clone this repo to your local PC: ```$ git clone https://github.com/kwehen/easyTravel```
 2. Place your DT tenant URL, PAAS Token, and OneAgent installation commands inside of the easytravel-install.sh script (Lines 13, 14, 164-166)
-3. Create a private GitHub repository and upload your configured easytravel-install.sh script (Make sure the file is named "easytravel-install.sh")
+3. Create a **PRIVATE** GitHub repository and upload your configured easytravel-install.sh script (Make sure the file is named "easytravel-install.sh")
 4. Create a Classic Personal Access Token: Click on your profile picture > Settings > Developer Settings > Personal access tokens > Tokens (classic) > Generate new token > Generate new token (classic) > repo > Generate token
 5. Copy the personal access token
 6. Paste personal access token in the line 1 of userdata.tpl
