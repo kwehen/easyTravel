@@ -20,7 +20,8 @@ Get easyTravel up and running with the OneAgent on AWS in minutes with this repo
 6. Paste personal access token in the line 1 of userdata.tpl
 7. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
 8. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh
-9. Paste link into userdata.tpl on your local machine without the "?token=RANDOMTOKENGENRATEDBYPRIVATEREPO"
+9. Paste link into userdata.tpl on your local machine without the "?token=RANDOMTOKENGENRATEDBYPRIVATEREPO". The command should look like: ```
+wget --header 'Authorization: token ghp_TFGHHE78JHHRE2W5Z6L90YUI' https://raw.githubusercontent.com/USER/REPO/main/easytravel-install.sh```
 10. Create key pair or use existing key pair in .ssh file (preferebly named 'tft-key'): https://www.purdue.edu/science/scienceit/ssh-keys-windows.html
 11. Update line 76 of main.tf with the path to the key pair your created
 12. ```$ terraform init```
