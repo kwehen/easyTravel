@@ -22,7 +22,7 @@ Get easyTravel up and running with the OneAgent on AWS in minutes with this repo
 8. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh
 9. Paste link into userdata.tpl on your local machine without the "?token=RANDOMTOKENGENRATEDBYPRIVATEREPO"
 10. Create key pair or use existing key pair in .ssh file (preferebly named 'tft-key'): https://www.purdue.edu/science/scienceit/ssh-keys-windows.html
-11. Update line 80 of main.tf with the path to the key pair your created
+11. Update line 76 of main.tf with the path to the key pair your created
 12. ```$ terraform init```
 13. ```$ terraform apply```
 14. On your local machine: ```cd /```, ```cd .ssh```
