@@ -15,16 +15,19 @@ Get easyTravel up and running with the OneAgent on AWS in minutes with this repo
 1. Clone this repo to your local PC: ```$ git clone https://github.com/kwehen/easyTravel```
 2. Place your DT tenant URL, PAAS Token, and OneAgent installation commands inside of the easytravel-install.sh script (Lines 13, 14, 164-166)
 3. Create a private GitHub repository and upload your configured easytravel-install.sh script (Make sure the file is named "easytravel-install.sh")
-4. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
-5. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh?token=RANDOMTOKENGENRATEDBYPRIVATEREPO
-6. Paste link into userdata.tpl on your local machine
-7. Create key pair or use existing key pair in .ssh file (preferebly named 'tft-key'): https://www.purdue.edu/science/scienceit/ssh-keys-windows.html
-8. Update line 80 of main.tf with the path to the key pair your created
-9. ```$ terraform init```
-10. ```$ terraform apply```
-11. On your local machine: ```cd /```, ```cd .ssh```
-12. Once the instance is created and full provisoned. SSH into it with the private key created by Terraform ```ssh -i "tft-key" ubuntu@ec2-1-2-3-4.compute-1.amazonaws.com```
-13. Run the ```top``` command to ensure the OneAgent is running
+4. Create a Classic Personal Access Token: Click on your profile picture > Settings > Developer Settings > Personal access tokens > Tokens (classic) > Generate new token > Generate new token (classic) > repo > Generate token
+5. Copy the personal access token
+6. Paste personal access token in the line 1 of userdata.tpl
+7. In your private GitHub repository, navigate to the RAW file of easytravel-install.sh in your browser.
+8. Copy the link to the RAW file. It should look similar to https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/easytravel-install.sh
+9. Paste link into userdata.tpl on your local machine without the "?token=RANDOMTOKENGENRATEDBYPRIVATEREPO"
+10. Create key pair or use existing key pair in .ssh file (preferebly named 'tft-key'): https://www.purdue.edu/science/scienceit/ssh-keys-windows.html
+11. Update line 80 of main.tf with the path to the key pair your created
+12. ```$ terraform init```
+13. ```$ terraform apply```
+14. On your local machine: ```cd /```, ```cd .ssh```
+15. Once the instance is created and full provisoned. SSH into it with the private key created by Terraform ```ssh -i "tft-key" ubuntu@ec2-1-2-3-4.compute-1.amazonaws.com```
+16. Run the ```top``` command to ensure the OneAgent is running
 
 # Troubleshooting
 - Verify that the commands pasted in the lines 164-166 are free of spacing issues
