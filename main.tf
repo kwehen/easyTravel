@@ -1,3 +1,12 @@
+resource "aws_vpc" "tf-test-vpc" {
+  cidr_block           = "10.1.0.0/16"
+  enable_dns_hostnames = true
+
+  tags = {
+    Name = "tf-test"
+  }
+}
+
 resource "aws_subnet" "tft-subnet1_public" {
   vpc_id                  = aws_vpc.tf-test-vpc.id
   cidr_block              = "10.1.1.0/24"
@@ -64,12 +73,13 @@ resource "aws_security_group" "tft-public-SG" {
 
 resource "aws_key_pair" "tft-auth" {
   key_name   = "tft-key"
-  public_key = file("~/.ssh/tft-key.pub") # Insert path to kay pair here
+  public_key = file("~/.ssh/tft-key.pub")
 }
+
 
 resource "aws_instance" "ubuntu-tft" {
   ami                    = data.aws_ami.server_ami.id
-  instance_type          = "t3.large"
+  instance_type          = "t2.large"
   key_name               = aws_key_pair.tft-auth.id
   vpc_security_group_ids = [aws_security_group.tft-public-SG.id]
   subnet_id              = aws_subnet.tft-subnet1_public.id
